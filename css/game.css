@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	background: #020824;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.9em;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2em 0;
+}
+
+.menu .btn-primary {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+	font-family: Helvetica, sans-serif;
+    color: #fff;
+    font-size: 0.9em;
+}
+nav a {
+    text-transform: uppercase;
+	color: #fff;
+    z-index: 100;
+}
+
+.brand {
+    font-size: 1.6em;
+    font-weight: 700;
+
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 0.7em;
+    z-index: 100;
+}
+
+.btn {
+    padding: 0.7em 2em;
+    border-radius: 0.3em;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #fff;
+    display: none;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #48fc8b, #1de7ea);
+    color: #111;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #1de7ea;
+}
+
+.background {
+	height: 100%;
+	min-width: 100%;
+	background-image: url('../vid/background.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+	
+}
+.nft-list {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 300px;
+    position: absolute;
+    top: 10vh;
+    right: 0;
+    z-index: 50;
+}
+
+.nft {
+    
+    top: 0;
+    left: 0;
+    height: 50px;
+    clip-path: circle();
+    cursor: pointer;
+}
+/* <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/U7huVmA3TKuqvznInJ" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/side-scroller-sidescrolling-scrolling-U7huVmA3TKuqvznInJ">via GIPHY</a></p> */
+.bird {
+	/* height: 100px;
+	width: 160px; */
+	position: fixed;
+	top: 40vh;
+	left: 30vw;
+	z-index: 100;
+}
+/* JAVASCRIPT CLASS NYL*/
+.visibility-bird-nyl {
+    visibility: visible;
+}
+.bird-nyl {
+    visibility: hidden;
+}
+/* JAVASCRIPT CLASS TRUMP*/
+.visibility-bird-trump {
+    visibility: visible;
+}
+.bird-trump {
+    visibility: hidden;
+}
+
+.bird-zombie {
+    visibility: hidden;
+}
+
+
+.pipe_sprite {
+	position: fixed;
+	top: 40vh;
+	left: 100vw;
+	height: 70vh;
+	width: 6vw;
+	background-color: #0b0a57;
+    
+}
+
+.message {
+	position: fixed;
+	z-index: 10;
+	height: 10vh;
+	font-size: 5vh;
+	font-weight: 100;
+	color: rgb(255, 255, 255);
+	top: 19vh;
+	left: 5vw;
+	text-align: center;
+	font-family: 'Press Start 2P';
+}
+
+.score {
+	position: fixed;
+	z-index: 10;
+	height: 10vh;
+	font-size: 5vh;
+	font-weight: 70;
+	color: goldenrod;
+	top: 10vh;
+	left: 0;
+	
+}
+
+.score_val {
+	color: gold;
+}
+
+.bird {
+    width: 50px;
+    height: 40px;
+    font-size: large;
+}
+
+.visibility {
+    visibility: hidden;
+}
+
+@media screen and (max-width:1000px){
+    .menu-btn {
+        display: block;
+    }
+    nav .menu {
+        background: #020824;
+        position: absolute;
+        left: 0;
+        top: 5em;
+        width: 100%;
+        height: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        opacity: 0;
+        transition: 0.6s;
+        overflow: hidden;
+        z-index: 100;
+    }
+    nav .btn-primary {
+        display: none;
+    }
+    .menu .btn-primary {
+        display: block;
+    }
+
+    /*JAVASCRIPT CLASS*/
+
+    nav .menu-open {
+        opacity: 1;
+        height: 20em;
+        overflow: visible;
+    }
+    nav .menu li {
+        margin: 1em 0;
+    }
+	.message {
+		
+		top: 60vh;
+		left: 5vw;
+		text-align: center;
+		font-size: 4vh;
+	}
+
+	.bird {
+		top: 50vh;
+	}
+}
+
+@media screen and (max-width:700px){
+    .pipe_sprite{
+        height: 72vh;
+        width: 11vw;
+    }
+}
+
